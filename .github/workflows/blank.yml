@@ -1,0 +1,59 @@
+##
+#Set the input x as a matrix
+#then set the solved value "p" as a null
+#finally i have changed every reference to "mean" to "solve"
+
+
+skcachematrix<-function(x=matrix(c(1:100,9),3,3)) {
+  p<-NULL
+set<-function(y){
+  x<<-y
+  P<<-NULL
+}
+Get<-function()x
+setsolve<-function(solve) p<<-solve
+getsolve<-function()p
+list(set=set,get=get,
+     getsolve=getsolve)
+}
+
+##
+##i did same here , mean has been changed to "solve" and "mean"to 'solve"
+
+# 
+cachesolve<-function(x,...) {
+  p<-x$getsolve()
+  if(!is.null(p)) {
+    msg("getting inversed matrix")
+    return(p)
+  }
+  data<-x$get()
+  p<-solve(data,...)
+  x$setsolve(p)
+  s
+}
+ 
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
